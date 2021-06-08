@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Princess_Connect", "Princess_Connect\Princess_Connect.csproj", "{44AFA1D0-781A-4773-BBD3-5EC9FEB341E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44AFA1D0-781A-4773-BBD3-5EC9FEB341E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AFA1D0-781A-4773-BBD3-5EC9FEB341E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AFA1D0-781A-4773-BBD3-5EC9FEB341E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AFA1D0-781A-4773-BBD3-5EC9FEB341E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {603A3844-F82B-4995-8A0F-9A71983B789B}
+	EndGlobalSection
+EndGlobal

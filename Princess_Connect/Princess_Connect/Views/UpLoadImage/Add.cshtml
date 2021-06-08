@@ -1,0 +1,22 @@
+﻿@model Princess_Connect.Models.CreateModels
+@{
+    ViewBag.Title = "uploadImage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>uploadImage</h2>
+
+<h2>Create</h2>
+@Html.ValidationSummary(true, null)
+@using (Html.BeginForm("Add", "UpLoadImage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <input type="file" name="ImageFile" required />
+        @*@Html.TextBoxFor(model=>model.ImageFile, new { @type="file", @name= "ImageFile" })*@
+        @*@Html.TextBoxFor(model => model.HinhAnhNhanVat, new { @class = "form-control", @placeholder = "Hình ảnh nhân vật" })*@
+    </div>
+    <input type="submit" value="Tạo mới"></input>
+
+}
+
