@@ -1,0 +1,101 @@
+﻿@model Princess_Connect.Models.CreateModels
+@{
+    ViewBag.Title = "ThemNhanVat";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div id="content">
+    <div id="left-box">
+        <img id="icon" width="128" height="128" src="https://redive.estertion.win/icon/unit/100531.webp">
+        </br>
+        <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFile(event)">
+    </div>
+    <div id="right-box">
+        <form>
+            <div id="three">
+                <div class="form-group">
+                    <label for="usr">Tên:</label>
+                    <input type="text" size="50" class="form-control" id="usr" placeholder="Nhập tên nhân vật" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Chiều cao:</label>
+                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập chiều cao" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Cân nặng:</label>
+                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập cân nặng" required>
+                </div>
+            </div>
+            <div id="four">
+                <div class="form-group">
+                    <label for="pwd">Sinh nhật:</label>
+                    <input type="date" class="form-control" id="pwd" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Nhóm máu:</label>
+                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập nhóm máu" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Chủng tộc:</label>
+                    <input type="text" size="23" class="form-control" id="pwd" placeholder="Nhập chủng tộc" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Sở thích:</label>
+                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập sở thích" required>
+                </div>
+            </div>
+            <div id="four">
+                <div class="form-group">
+                    <label for="pwd">Lồng tiếng:</label>
+                    <input type="text" size="50" class="form-control" id="pwd" placeholder="Nhập người lồng tiếng" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Miêu tả:</label>
+                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập miêu tả" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Chi tiết:</label>
+                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập chi tiết" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <select name="cars" class="custom-select mb-3" required>
+                    <option selected>Chọn bang hội nhân vật</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    <option value="volvo">guild 1</option>
+                    v
+                </select>
+            </div>
+            <div class="form-group submit">
+                <input type="submit" size="30" class="form-control submit" id="pwd" value="Thêm nhân vật" required>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    var loadFile = function (event) {
+        var output = document.getElementById('icon');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+</script>
+

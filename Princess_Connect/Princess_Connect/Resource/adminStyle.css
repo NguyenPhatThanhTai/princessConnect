@@ -1,0 +1,52 @@
+﻿body {
+    background-image: url("Wiki-background.jpg");
+}
+
+#main {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 10px;
+    background-color: rgba(248, 248, 255, 0.7);
+    transition: margin-left .5s;
+}
+
+    #main #content #left-box {
+        position: relative;
+        text-align: center;
+    }
+
+        #main #content #left-box img {
+            border: 5px solid pink;
+        }
+
+        #main #content #left-box input {
+            padding-top: 10px;
+        }
+
+    #main #content {
+        padding: 30px;
+    }
+
+        #main #content #right-box {
+        }
+
+            #main #content #right-box #three {
+                display: flex;
+                flex-direction: row;
+                align-content: stretch;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            #main #content #right-box #four {
+                display: flex;
+                flex-direction: row;
+                align-content: stretch;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+    #main #right-box .submit {
+        background-color: pink;
+        color: whitesmoke;
+    }

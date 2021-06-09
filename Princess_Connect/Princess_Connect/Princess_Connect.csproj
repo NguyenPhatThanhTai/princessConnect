@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CharacterController.cs" />
     <Compile Include="Data\DataModel.cs" />
     <Compile Include="Data\FrameWork\Data.cs" />
@@ -148,6 +149,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Resource\adminStyle.css" />
     <Content Include="Resource\Style.css" />
     <Content Include="Resource\Wiki-background.jpg" />
     <Content Include="Resource\Wiki-wordmark.png" />
@@ -179,6 +181,9 @@
     <Content Include="Views\Character\TrangChu.cshtml" />
     <Content Include="Views\Character\ThemNhanVat.cshtml" />
     <Content Include="Views\Character\ChiTiet.cshtml" />
+    <Content Include="Views\Admin\Trangchu.cshtml" />
+    <Content Include="Views\Admin\ThemNhanVat.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
