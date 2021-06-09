@@ -1,0 +1,50 @@
+﻿@model List<Princess_Connect.Data.FrameWork.SQL_Story>
+@{
+    ViewBag.Title = "Trang Chủ";
+}
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+<div id="picture"> <img width="800" src="~/Resource/wp5828620.png"></div>
+<div class="right-slide">
+    <a>Top nhân vật tuần</a>
+    <div id="list">
+        <div>
+            <img src="https://redive.estertion.win/icon/unit/100161.webp" alt="">
+        </div>
+        <div>
+            <img src="https://redive.estertion.win/icon/unit/100361.webp" alt="">
+        </div>
+        <div>
+            <img src="https://redive.estertion.win/icon/unit/100461.webp" alt="">
+        </div>
+    </div>
+</div>
+<p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+<div id="content">
+    @foreach (var item in Model)
+    {
+    <div>
+        <a style="text-decoration: none;" href="@Url.Action("ChiTiet", "Character", new { NV = item.SQL_Character.Character_Id})">
+            <img width="128" height="128" src="~/Image/@item.SQL_Character.Character_Picture" alt="@item.SQL_Character.Character_Name" />
+            <h3>@item.SQL_Character.Character_Name</h3>
+        </a>
+        @*<div>
+            <b>@item.SQL_Character.Character_Id</b>
+            <b>@item.SQL_Character.Character_Name</b>
+            <b>xin chào @item.SQL_Character.Character_Picture</b>
+
+            <b>@item.Character_Story</b>
+            <b>@item.Character_Picture_Story</b>
+        </div>*@
+    </div>
+    }
+    <div>
+
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿@model Princess_Connect.Data.FrameWork.SQL_Story
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ChiTiet</h2>
+
+<h3>@Model.SQL_Character.Character_Id</h3>
+<h3>@Model.SQL_Character.Character_Name</h3>
+<img width="128" height="128" src="~/Image/@Model.SQL_Character.Character_Picture" alt="@Model.SQL_Character.Character_Name"
+

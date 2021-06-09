@@ -19,9 +19,9 @@ public class DataModel
         return data.SQL_Story.ToList();
     }
 
-    public SQL_Story getDetail(String Id)
+    public SQL_Story getDetail(String NV)
     {
-        var result = data.SQL_Story.FirstOrDefault(b => b.Character_Id == Id);
+        var result = data.SQL_Story.FirstOrDefault(b => b.Character_Id == NV);
         if(result != null)
         {
             return result;

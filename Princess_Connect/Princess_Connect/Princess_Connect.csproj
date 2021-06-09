@@ -128,8 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UpLoadImageController.cs" />
+    <Compile Include="Controllers\CharacterController.cs" />
     <Compile Include="Data\DataModel.cs" />
     <Compile Include="Data\FrameWork\Data.cs" />
     <Compile Include="Data\FrameWork\SQL_Character.cs" />
@@ -149,6 +148,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Resource\Style.css" />
+    <Content Include="Resource\Wiki-background.jpg" />
+    <Content Include="Resource\Wiki-wordmark.png" />
+    <Content Include="Resource\wp5828620.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -173,11 +176,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Create.cshtml" />
-    <Content Include="Views\UpLoadImage\Add.cshtml" />
+    <Content Include="Views\Character\TrangChu.cshtml" />
+    <Content Include="Views\Character\ThemNhanVat.cshtml" />
+    <Content Include="Views\Character\ChiTiet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -6,7 +6,7 @@
 
 <h2>Create</h2>
 @Html.ValidationSummary(true, null)
-@using (Html.BeginForm("Create", "Home", FormMethod.Post, new {enctype="multipart/form-data" }))
+@using (Html.BeginForm("ThemNhanVat", "Character", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     <div>
@@ -15,12 +15,12 @@
     </div>
     <div>
         @*có 2 cách để lập 1 là kiểu html thuần 2 là kiểu của asp.net*@
-        <input class="form-control" type="text" name="TenNhanVat" required /> 
+        <input class="form-control" type="text" name="TenNhanVat" required />
         @*@Html.TextBoxFor(model => model.TenNhanVat, new { @class = "form-control", @placeholder = "Tên nhân vật" })*@
     </div>
     <div>
         @*<input type="file" name="ImageFile" required />*@
-        @Html.TextBoxFor(model=>model.ImageFile, new { @type="file", @name= "ImageFile" })
+        @Html.TextBoxFor(model => model.ImageFile, new { @type = "file", @name = "ImageFile" })
         @*@Html.TextBoxFor(model => model.HinhAnhNhanVat, new { @class = "form-control", @placeholder = "Hình ảnh nhân vật" })*@
     </div>
     <div>
