@@ -2,22 +2,32 @@
     font-family: Cursive, Helvetica, sans-serif;
     background-image: url("Wiki-background.jpg");
     background-attachment: fixed;
+    transition: 0.5s;
 }
+
+
 /* slide bar */
 
+#header {
+    margin-left: 150px;
+    margin-right: 150px;
+    transition: margin-right .5s;
+    transition: margin-left .5s;
+}
+
 .sidenav {
-    height: 400px;
+    grid-area: left;
+    height: 1480px;
     width: 0;
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 150px;
+    left: 0;
     background-color: pink;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 50px;
-    margin-top: 170px;
-    margin-left: 8px;
+    margin-top: 10px;
 }
 
     .sidenav a {
@@ -26,7 +36,7 @@
         font-size: 25px;
         color: #818181;
         display: block;
-        transition: 0.3s;
+        transition: 0.5s;
     }
 
         .sidenav a:hover {
@@ -42,22 +52,24 @@
     }
 
 #main {
+    transition: 0.5s;
     margin-left: 150px;
     margin-right: 150px;
     background-color: rgba(248, 248, 255, 0.7);
+    transition: margin-right .5s;
     transition: margin-left .5s;
 }
 
 .ThanhChucNang {
+    transition: 0.5s;
     background-color: rgb(229, 119, 233);
     text-align: center;
     padding: 5px;
-    margin-left: 150px;
-    margin-right: 150px;
     margin-top: 10px;
 }
 
     .ThanhChucNang a {
+        transition: 0.5s;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 10px;
@@ -72,50 +84,73 @@
         }
 
 #main #picture {
+    transition: 0.5s;
+    grid-area: middle;
     margin-top: 10px;
     text-align: center;
 }
 
+    #main #picture img {
+        transition: 0.5s;
+        width: 800px;
+    }
+
 #main .right-slide {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    margin-top: 170px;
-    margin-left: 1010px;
-    padding-right: 15px;
+    transition: 0.5s;
+    text-align: center;
+    grid-area: right;
     border: 5px solid pink;
-    height: 440px;
+    margin-top: 10px;
+    align-items: center;
 }
 
-    #main .right-slide a {
-        padding: 14px;
-        white-space: nowrap;
+    #main .right-slide b {
+        transition: 0.5s;
+        padding-right: 100px;
+        padding-left: 100px;
+        text-align: center;
+        background-color: antiquewhite;
     }
 
-    #main .right-slide #list img {
-        width: 100px;
-        padding-left: 30px;
-        padding-top: 20px;
+    #main .right-slide #list {
+        transition: 0.5s;
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        padding-left: 40px;
     }
+
+        #main .right-slide #list img {
+            transition: 0.5s;
+            width: 100px;
+            padding-top: 20px;
+            margin: 5px;
+        }
+
+#main #header-main {
+    transition: 0.5s;
+    display: grid;
+    grid-template-areas: 'left left middle middle right right';
+}
+
+
 /*thanh top bar  */
 
 .topnav {
+    transition: 0.5s;
     overflow: hidden;
     background-color: white;
     border-top: 5px solid pink;
-    margin-left: 150px;
-    margin-right: 150px;
 }
 
     .topnav img {
+        transition: 0.5s;
         width: 300px;
         float: left;
     }
 
     .topnav a {
+        transition: 0.5s;
         float: left;
         color: black;
         text-align: center;
@@ -125,6 +160,7 @@
     }
 
     .topnav #logo {
+        transition: 0.5s;
         padding: 40px 16px;
         background-color: pink;
     }
@@ -138,9 +174,12 @@
         background-color: pink;
         color: white;
     }
+
+
 /* flex box */
 
 #content {
+    transition: 0.5s;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -148,21 +187,41 @@
 }
 
 #conetent div {
+    transition: 0.5s;
     text-align: center;
 }
 
 #content img {
+    transition: 0.5s;
     margin: 10px;
 }
 
 #content h3 {
+    transition: 0.5s;
     text-align: center;
     color: black;
 }
 
-@media screen and (max-height: 750px) {
+@media screen and (max-width: 600px) {
     #main {
         margin: auto;
+    }
+
+    #header {
+        margin: 0;
+    }
+
+        #header .topnav #logo {
+            display: none;
+        }
+
+        #header .topnav img {
+            width: 400px;
+        }
+
+    #main #header-main {
+        display: grid;
+        grid-template-areas: 'middle''right';
     }
 
     .topnav {
@@ -170,7 +229,7 @@
     }
 
         .topnav h1 {
-            font-size: medium;
+            font-size: 25px;
         }
 
     .ThanhChucNang {
@@ -178,6 +237,11 @@
     }
 
     #main #picture {
-        display: none;
+        grid-area: middle;
+        margin-top: 10px;
     }
+
+        #main #picture img {
+            width: 370px;
+        }
 }

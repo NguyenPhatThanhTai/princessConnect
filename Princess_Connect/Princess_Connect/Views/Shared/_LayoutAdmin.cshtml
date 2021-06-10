@@ -3,7 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/Resource/adminStyle.css">
-    <link rel="stylesheet" href="~/Resource/Style.css">
     @Styles.Render("~/Resource/adminStyle.css")
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.5.2/jquery.min.js"></script>
@@ -26,11 +25,21 @@
         <a href="#">Quản lý guild</a>
         <a href="#">Quản lý hình</a>
         <a href="#">Thống kê</a>
-        <a href="#">Quản lý</a>
+        <a href="#">Quản lý thành viên</a>
     </div>
 
     <div id="main">
         @RenderBody()
     </div>
 </body>
+
+<script>
+    var loadFile = function (event) {
+        var output = document.getElementById('icon');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+</script>
 </html>

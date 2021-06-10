@@ -9,34 +9,43 @@
 </head>
 
 <body>
-    <header>
-        <div class="topnav">
-            <a id="logo" lass="active" href="#home" onclick="openNav()">&#9776; </a>
-            <img src="~/Resource/Wiki-wordmark.png">
-            <!-- <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a> -->
-            <h1 style="color: rgb(187, 93, 196); text-align: center;">Giới thiệu hệ thống nhân vật</h1>
+    <div class="header" id="header">
+        <header>
+            <div class="topnav">
+                <a id="logo" class="active" href="#home" onclick="openNav()">&#9776; </a>
+                <img src="~/Resource/Wiki-wordmark.png">
+                <!-- <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a> -->
+                <h1 style="color: rgb(187, 93, 196); text-align: center;">Giới thiệu hệ thống nhân vật</h1>
+            </div>
+        </header>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Liên hệ</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         </div>
-    </header>
 
-    <div id="mySidenav" class="sidenav">
-        <a href="#">Trang chủ</a>
-        <a href="#">Liên hệ</a>
-        <a href="#">About</a>
-        <a href="#">About</a>
-        <a href="#">About</a>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="ThanhChucNang">
+            <a href="#">Trang chủ</a>
+            <a href="#">Cốt truyện</a>
+            <a href="#">Thông tin nhân vật</a>
+            <a href="#">các bộ trang bị</a>
+            <a @Html.ActionLink("Thêm nhân vật", "ThemNhanVat", "Admin")</a>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
     </div>
 
-    <div class="ThanhChucNang">
-        <a href="#">Trang chủ</a>
-        <a href="#">Cốt truyện</a>
-        <a href="#">Thông tin nhân vật</a>
-        <a href="#">các bộ trang bị</a>
-        <a href="#">Gatcha</a>
-        <a>@Html.ActionLink("Thêm nhân vật", "ThemNhanVat", "Character")</a>
-    </div>
 
     <div id="main">
         @RenderBody()
@@ -46,21 +55,27 @@
         </footer>
     </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "190px";
-            // document.getElementById("main").style.marginLeft = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            // document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
-
 </body>
 @*@Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
 @RenderSection("scripts", required: false)*@
 
 </html>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginRight = "50px";
+        document.getElementById("header").style.marginRight = "50px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("header").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "150px";
+        document.getElementById("main").style.marginRight = "150px";
+        document.getElementById("header").style.marginLeft = "150px";
+        document.getElementById("header").style.marginRight = "150px";
+    }
+</script>

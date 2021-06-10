@@ -6,34 +6,45 @@
 
 <div id="content">
     <div id="left-box">
-        <img id="icon" width="128" height="128" src="https://redive.estertion.win/icon/unit/100531.webp">
-        </br>
-        <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFile(event)">
+        <div id="icon-image">
+            <b>Icon cho nhân vật</b>
+            <br>
+            <img id="icon" width="128" height="128" src="https://redive.estertion.win/icon/unit/100531.webp">
+            </br>
+            <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFileIcon(event)">
+        </div>
+        <div id="backgroud-image">
+            <b>Ảnh nền cho nhân vật</b>
+            <br>
+            <img id="backgroud-image-img" width="300" height="300" src="https://redive.estertion.win/icon/unit/100531.webp">
+            </br>
+            <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFileBackground(event)">
+        </div>
     </div>
     <div id="right-box">
         <form>
-            <div id="three">
+            <div id="input">
                 <div class="form-group">
                     <label for="usr">Tên:</label>
                     <input type="text" size="50" class="form-control" id="usr" placeholder="Nhập tên nhân vật" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Chiều cao:</label>
-                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập chiều cao" required>
+                    <input type="text" size="30" class="form-control" id="pwd" placeholder="Nhập chiều cao" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Cân nặng:</label>
                     <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập cân nặng" required>
                 </div>
             </div>
-            <div id="four">
+            <div id="input">
                 <div class="form-group">
                     <label for="pwd">Sinh nhật:</label>
                     <input type="date" class="form-control" id="pwd" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Nhóm máu:</label>
-                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập nhóm máu" required>
+                    <input type="text" size="30" class="form-control" id="pwd" placeholder="Nhập nhóm máu" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Chủng tộc:</label>
@@ -44,19 +55,22 @@
                     <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập sở thích" required>
                 </div>
             </div>
-            <div id="four">
+            <div id="input">
                 <div class="form-group">
                     <label for="pwd">Lồng tiếng:</label>
                     <input type="text" size="50" class="form-control" id="pwd" placeholder="Nhập người lồng tiếng" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Miêu tả:</label>
-                    <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập miêu tả" required>
+                    <input type="text" size="30" class="form-control" id="pwd" placeholder="Nhập miêu tả" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Chi tiết:</label>
                     <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập chi tiết" required>
                 </div>
+            </div>
+            <div id="textarea">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="9" placeholder="Miêu tả chi tiết nhân vật..."></textarea>
             </div>
             <div class="form-group">
                 <select name="cars" class="custom-select mb-3" required>
@@ -90,8 +104,17 @@
 </div>
 
 <script>
-    var loadFile = function (event) {
+    var loadFileIcon = function (event) {
         var output = document.getElementById('icon');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+</script>
+<script>
+    var loadFileBackground = function (event) {
+        var output = document.getElementById('backgroud-image-img');
         output.src = URL.createObjectURL(event.target.files[0]);
         output.onload = function () {
             URL.revokeObjectURL(output.src) // free memory
