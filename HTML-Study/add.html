@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.5.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url("Wiki-background.jpg");
+            background-attachment: fixed;
+        }
+        
+        footer {
+            background-color: rgba(50, 50, 53, 0.7);
+            text-align: center;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+        }
+        
+        .header {
+            grid-area: header;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: white;
+            border-top: 5px solid pink;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        
+        .topnav img {
+            width: 300px;
+            float: left;
+        }
+        
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: wavy;
+            font-size: 15px;
+        }
+        
+        .topnav #logo {
+            padding: 40px 16px;
+            background-color: pink;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: pink;
+            color: white;
+        }
+        
+        .ThanhChucNang {
+            background-color: rgb(229, 119, 233);
+            text-align: center;
+            padding: 5px;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+        }
+        
+        .ThanhChucNang a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .ThanhChucNang a:hover {
+            background-color: pink;
+            color: black;
+        }
+        
+        #main {
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+            background-color: rgba(248, 248, 255, 0.7);
+            transition: margin-left .5s;
+        }
+        
+        #main #content {
+            display: grid;
+            grid-template-areas: 'left right';
+        }
+        
+        #main #content #left-box {
+            grid-area: left;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        #main #content #right-box {
+            grid-area: right;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        #main #content #left-box #icon-image {
+            margin-top: 10px;
+        }
+        
+        #main #content #left-box #icon-image img {
+            margin-top: 30px;
+            border: 5px solid pink;
+        }
+        
+        #main #content #left-box #backgroud-image {
+            margin-top: 30px;
+        }
+        
+        #main #content #left-box input {
+            padding-top: 10px;
+        }
+        
+        #main #content #right-box #input {
+            display: flex;
+            flex-direction: row;
+            align-content: stretch;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        #main #content #right-box #textarea {
+            margin-bottom: 30px;
+        }
+        
+        #main #right-box .submit {
+            background-color: pink;
+            color: whitesmoke;
+        }
+        
+        @media screen and (max-width: 600px) {
+            #main {
+                margin: auto;
+            }
+            #main #content {
+                grid-template-areas: 'left''right';
+            }
+            #main #content #left-box {
+                grid-area: left;
+            }
+            #main #content #right-box {
+                grid-area: right;
+            }
+            #main #content #right-box #input {
+                display: block;
+                flex-direction: row;
+                align-content: stretch;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .topnav {
+                display: block;
+                margin: auto;
+                align-items: center;
+            }
+            .topnav img {
+                width: 400px;
+            }
+            .topnav h1 {
+                font-size: 30px;
+            }
+            .ThanhChucNang {
+                margin: auto;
+                padding: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gird">
+        <div class="header">
+            <header>
+                <div class="topnav">
+                    <img src="Wiki-wordmark.png">
+                    <!-- <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a> -->
+                    <h1 style="color: #F65091; text-align: center;">Trang quản lý của Admin</h1>
+                </div>
+            </header>
+
+            <div class="ThanhChucNang">
+                <a href="#">Quản lý nhân vật</a>
+                <a href="#">Quản lý guild</a>
+                <a href="#">Quản lý hình</a>
+                <a href="#">Thống kê</a>
+                <a href="#">Quản lý</a>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="content">
+                <div id="left-box">
+                    <div id="icon-image">
+                        <b>Icon cho nhân vật</b>
+                        <br>
+                        <img id="icon" width="128" height="128" src="https://redive.estertion.win/icon/unit/100531.webp">
+                        </br>
+                        <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFile(event)">
+                    </div>
+                    <div id="backgroud-image">
+                        <b>Ảnh nền cho nhân vật</b>
+                        <br>
+                        <img id="backgroud-image" width="300" height="300" src="https://static.wikia.nocookie.net/princess-connect/images/8/89/Pecorine-princess-sprite-normal.png/revision/latest/scale-to-width-down/310?cb=20210131045628">
+                        </br>
+                        <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFile(event)">
+                    </div>
+                </div>
+                <div id="right-box">
+                    <form>
+                        <div id="input">
+                            <div class="form-group">
+                                <label for="usr">Tên:</label>
+                                <input type="text" size="50" class="form-control" id="usr" placeholder="Nhập tên nhân vật" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Chiều cao:</label>
+                                <input type="text" size="30" class="form-control" id="pwd" placeholder="Nhập chiều cao" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Cân nặng:</label>
+                                <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập cân nặng" required>
+                            </div>
+                        </div>
+                        <div id="input">
+                            <div class="form-group">
+                                <label for="pwd">Sinh nhật:</label>
+                                <input type="date" class="form-control" id="pwd" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Nhóm máu:</label>
+                                <input type="text" size="15" class="form-control" id="pwd" placeholder="Nhập nhóm máu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Chủng tộc:</label>
+                                <input type="text" size="25" class="form-control" id="pwd" placeholder="Nhập chủng tộc" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Sở thích:</label>
+                                <input type="text" size="33" class="form-control" id="pwd" placeholder="Nhập sở thích" required>
+                            </div>
+                        </div>
+                        <div id="input">
+                            <div class="form-group">
+                                <label for="pwd">Lồng tiếng:</label>
+                                <input type="text" size="50" class="form-control" id="pwd" placeholder="Nhập người lồng tiếng" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Miêu tả:</label>
+                                <input type="text" size="30" class="form-control" id="pwd" placeholder="Nhập miêu tả" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Chi tiết:</label>
+                                <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập chi tiết" required>
+                            </div>
+                        </div>
+                        <div id="textarea">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="9" placeholder="Miêu tả chi tiết nhân vật..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <select name="cars" class="custom-select mb-3" required>
+                                <option selected>Chọn bang hội nhân vật</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                <option value="volvo">guild 1</option>
+                                v
+                              </select>
+                        </div>
+                        <div class="form-group submit">
+                            <input type="submit" size="30" class="form-control submit" id="pwd" value="Thêm nhân vật" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <coppy-right>Design by DHT team</coppy-right>
+    </footer>
+</body>
+
+<script>
+    var loadFile = function(event) {
+        var output = document.getElementById('icon');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+</script>
+
+
+<!-- <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+    $i = 0;
+
+    function doRefresh() {
+        $i = $i + 1;
+        document.getElementById("here").innerHTML = $i;
+    }
+    $(function() {
+        setInterval(doRefresh, 3000);
+    });
+
+</script> -->

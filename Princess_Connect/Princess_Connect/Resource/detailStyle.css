@@ -1,0 +1,203 @@
+﻿#main #name {
+    font-size: 25px;
+    border-bottom: 1px solid #818181;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 20px;
+}
+
+#main #thanhchitiet {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+    #main #thanhchitiet a {
+        text-decoration: none;
+        background-color: transparent;
+        color: #ee309f;
+        font-size: 15px;
+        font-weight: bold;
+        border: 1px solid #818181;
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+        #main #thanhchitiet a:hover {
+            text-decoration: dotted;
+            background-color: #e46ab1;
+            color: white;
+        }
+
+#main #ThongTinNhanVat #content-char {
+    /* float: left; */
+    /* width: 800px; */
+}
+
+    #main #ThongTinNhanVat #content-char p {
+        text-indent: 3em;
+        margin-left: 30px;
+        font-weight: normal;
+    }
+
+#main #ThongTinNhanVat #img-right {
+    width: 350px;
+    border: 1px solid #818181;
+    float: right;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+    #main #ThongTinNhanVat #img-right img {
+        width: 300px;
+    }
+
+    #main #ThongTinNhanVat #img-right #button-img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: rgb(123, 208, 219);
+        padding: 10px;
+    }
+
+        #main #ThongTinNhanVat #img-right #button-img a {
+            padding: 10px;
+            color: #3b3b3b;
+            text-decoration: none;
+            background-color: transparent;
+            font-size: 17px;
+        }
+
+            #main #ThongTinNhanVat #img-right #button-img a:hover {
+                background-color: #5dacda;
+                color: white;
+            }
+
+            #main #ThongTinNhanVat #img-right #button-img a:active {
+                background-color: #e46ab1;
+                color: white;
+            }
+
+    #main #ThongTinNhanVat #img-right #bottom-img {
+        background-color: rgb(123, 208, 219);
+        padding: 10px;
+        text-align: center;
+    }
+
+        #main #ThongTinNhanVat #img-right #bottom-img p {
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+#main #ThongTinNhanVat #content-char #content-infomation {
+    width: 800px;
+}
+
+    #main #ThongTinNhanVat #content-char #content-infomation h3 {
+        border-bottom: 1px solid #818181;
+        margin-left: 30px;
+    }
+
+    #main #ThongTinNhanVat #content-char #content-infomation p {
+        word-wrap: break-word;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+#main #ThongTinNhanVat #content-char #content-apperience h3 {
+    border-bottom: 1px solid #818181;
+    margin-left: 30px;
+    width: 770px;
+}
+
+#main #ThongTinNhanVat #content-char #content-apperience p {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#main #ThongTinNhanVat #content-char #content-history h3 {
+    border-bottom: 1px solid #818181;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#main #ThongTinNhanVat #content-char #content-history b {
+    display: block;
+}
+
+#main #ThongTinNhanVat #content-char #content-history p {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    #main {
+        margin: auto;
+    }
+
+    #header {
+        margin: 0;
+    }
+
+        #header .topnav #logo {
+            display: none;
+        }
+
+        #header .topnav img {
+            width: 400px;
+        }
+
+    #main #header-main {
+        display: grid;
+        grid-template-areas: 'middle''right';
+    }
+
+    .topnav {
+        margin: 0;
+    }
+
+        .topnav h1 {
+            font-size: 25px;
+        }
+
+    .ThanhChucNang {
+        margin: 0;
+        justify-content: center;
+    }
+
+    #main #thanhchitiet {
+        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+        #main #thanhchitiet a {
+            margin: 10px;
+        }
+
+    #main #ThongTinNhanVat #content-char {
+        margin-top: 20px;
+    }
+
+        #main #ThongTinNhanVat #content-char p {
+            text-indent: 0;
+        }
+
+        #main #ThongTinNhanVat #content-char #content-infomation {
+            width: 350px;
+        }
+
+        #main #ThongTinNhanVat #content-char #content-apperience {
+            width: 350px;
+        }
+
+            #main #ThongTinNhanVat #content-char #content-apperience h3 {
+                width: 300px;
+            }
+
+        #main #ThongTinNhanVat #content-char #content-history {
+            width: 350px;
+        }
+}

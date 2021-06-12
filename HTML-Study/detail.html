@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi-Tiết</title>
+
+    <style>
+        body {
+            font-family: Cursive, Helvetica, sans-serif;
+            background-image: url("Wiki-background.jpg");
+            background-attachment: fixed;
+            transition: 0.5s;
+        }
+        
+        .sidenav {
+            grid-area: left;
+            height: 1480px;
+            width: 0;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: pink;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 50px;
+            margin-top: 10px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.5s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            color: rgb(131, 56, 112);
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .topnav {
+            transition: 0.5s;
+            overflow: hidden;
+            background-color: white;
+            border-top: 5px solid pink;
+        }
+        
+        .topnav img {
+            transition: 0.5s;
+            width: 300px;
+            float: left;
+        }
+        
+        .topnav a {
+            transition: 0.5s;
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: wavy;
+            font-size: 15px;
+        }
+        
+        .topnav #logo {
+            transition: 0.5s;
+            padding: 40px 16px;
+            background-color: pink;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: pink;
+            color: white;
+        }
+        
+        .ThanhChucNang {
+            transition: 0.5s;
+            background-color: rgb(229, 119, 233);
+            text-align: center;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        
+        .ThanhChucNang a {
+            transition: 0.5s;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .ThanhChucNang a:hover {
+            background-color: pink;
+            color: black;
+        }
+        
+        #header {
+            margin-left: 150px;
+            margin-right: 150px;
+            transition: margin-right .5s;
+            transition: margin-left .5s;
+        }
+        
+        #main {
+            transition: 0.5s;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+            background-color: rgba(248, 248, 255, 0.7);
+            transition: margin-right .5s;
+            transition: margin-left .5s;
+        }
+        
+        #main #name {
+            font-size: 25px;
+            border-bottom: 1px solid #818181;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding-top: 20px;
+        }
+        
+        #main #thanhchitiet {
+            margin-top: 50px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #main #thanhchitiet a {
+            text-decoration: none;
+            background-color: transparent;
+            color: #ee309f;
+            font-size: 15px;
+            font-weight: bold;
+            border: 1px solid #818181;
+            border-radius: 6px;
+            padding: 10px;
+        }
+        
+        #main #thanhchitiet a:hover {
+            text-decoration: dotted;
+            background-color: #e46ab1;
+            color: white;
+        }
+        
+        #main #ThongTinNhanVat #content {
+            /* float: left; */
+            /* width: 800px; */
+        }
+        
+        #main #ThongTinNhanVat #content p {
+            text-indent: 3em;
+            margin-left: 30px;
+            font-weight: normal;
+        }
+        
+        #main #ThongTinNhanVat #img-right {
+            width: 350px;
+            border: 1px solid #818181;
+            float: right;
+            margin-left: 10px;
+            margin-right: 30px;
+            margin-left: 10px;
+        }
+        
+        #main #ThongTinNhanVat #img-right img {
+            width: 300px;
+        }
+        
+        #main #ThongTinNhanVat #img-right #button-img {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgb(123, 208, 219);
+            padding: 10px;
+        }
+        
+        #main #ThongTinNhanVat #img-right #button-img a {
+            padding: 10px;
+            color: #3b3b3b;
+            text-decoration: none;
+            background-color: transparent;
+            font-size: 17px;
+        }
+        
+        #main #ThongTinNhanVat #img-right #button-img a:hover {
+            background-color: #5dacda;
+            color: white;
+        }
+        
+        #main #ThongTinNhanVat #img-right #button-img a:active {
+            background-color: #e46ab1;
+            color: white;
+        }
+        
+        #main #ThongTinNhanVat #img-right #bottom-img {
+            background-color: rgb(123, 208, 219);
+            padding: 10px;
+            text-align: center;
+        }
+        
+        #main #ThongTinNhanVat #img-right #bottom-img p {
+            font-size: 15px;
+            white-space: nowrap;
+        }
+        
+        #main #ThongTinNhanVat #content #content-infomation {
+            width: 800px;
+        }
+        
+        #main #ThongTinNhanVat #content #content-infomation h3 {
+            border-bottom: 1px solid #818181;
+            margin-left: 30px;
+        }
+        
+        #main #ThongTinNhanVat #content #content-infomation p {
+            word-wrap: break-word;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        #main #ThongTinNhanVat #content #content-apperience h3 {
+            border-bottom: 1px solid #818181;
+            margin-left: 30px;
+            width: 770px;
+        }
+        
+        #main #ThongTinNhanVat #content #content-apperience p {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        #main #ThongTinNhanVat #content #content-history h3 {
+            border-bottom: 1px solid #818181;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        #main #ThongTinNhanVat #content #content-history b {
+            display: block;
+        }
+        
+        #main #ThongTinNhanVat #content #content-history p {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            #main {
+                margin: auto;
+            }
+            #header {
+                margin: 0;
+            }
+            #header .topnav #logo {
+                display: none;
+            }
+            #header .topnav img {
+                width: 400px;
+            }
+            #main #header-main {
+                display: grid;
+                grid-template-areas: 'middle''right';
+            }
+            .topnav {
+                margin: 0;
+            }
+            .topnav h1 {
+                font-size: 25px;
+            }
+            .ThanhChucNang {
+                margin: 0;
+                justify-content: center;
+            }
+            #main #thanhchitiet {
+                margin-top: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: left;
+            }
+            #main #thanhchitiet a {
+                margin: 10px;
+            }
+            #main #ThongTinNhanVat #content #content {
+                margin-top: 20px;
+            }
+            #main #ThongTinNhanVat #content p {
+                text-indent: 0;
+            }
+            #main #ThongTinNhanVat #content #content-infomation {
+                width: 350px;
+            }
+            #main #ThongTinNhanVat #content #content-apperience {
+                width: 350px;
+            }
+            #main #ThongTinNhanVat #content #content-apperience h3 {
+                width: 300px;
+            }
+            #main #ThongTinNhanVat #content #content-history {
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <header>
+            <div class="topnav">
+                <a id="logo" class="active" href="#home" onclick="openNav()">&#9776; </a>
+                <img src="Wiki-wordmark.png">
+                <!-- <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a> -->
+                <h1 style="color: rgb(187, 93, 196); text-align: center;">Chi tiết nhân vật (Tên)</h1>
+            </div>
+        </header>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Liên hệ</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+
+        <div class="ThanhChucNang">
+            <a href="#">Trang chủ</a>
+            <a href="#">Cốt truyện</a>
+            <a href="#">Thông tin nhân vật</a>
+            <a href="#">các bộ trang bị</a>
+            <a href="#">Gatcha</a>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="name">Tên nhân vật ở đây</div>
+        <div id="thanhchitiet">
+            <a href="#">Thông tin chung</a>
+            <a href="#">Mối quan hệ</a>
+            <a href="#">Hình ảnh</a>
+            <a href="#">Thẻ hình</a>
+            <a href="#">Cốt truyện</a>
+        </div>
+        <div id="ThongTinNhanVat">
+            <div id="img-right">
+                <div id="button-img">
+                    <a href="#">Mặc định</a>
+                    <a href="#">Mùa hè</a>
+                    <a href="#">Bãi biển</a>
+                    <a href="#">Mùa xuân</a>
+                    <a href="#">Đời thực</a>
+                </div>
+                <img src="https://static.wikia.nocookie.net/princess-connect/images/7/75/Pecorine_sprite_normal.png/revision/latest?cb=20190618140204">
+                <div id="bottom-img">
+                    <b>ユースティアナ・フォン・アストライア</p>
+                    <b>Eustiana von Astraea</p>
+                </div>
+            </div>
+            <div id="content">
+                <div id="content-infomation">
+                    <h3>1. Thông tin cá nhân</h3>
+                    <p>Tên trong trò chơi: </p>
+                    <p>Bang hội: </p>
+                    <p>Chủng tộc: </p>
+                    <p>Tuổi: </p>
+                    <p>Sinh nhật: </p>
+                    <p>Chiều cao: </p>
+                    <p>Trọng lượng: </p>
+                    <p>Nhóm máu: </p>
+                    <p>Sở thích: </p>
+                    <p>Liên kết: </p>
+                    <p>Diễn viên lồng tiếng: </p>
+                </div>
+                <div id="content-apperience">
+                    <h3>2. Ngoại hình</h3>
+                        <p>Pecorine is a human-race member in the game with long, orange hair and light blue eyes. Her hair extends below her waist and appears to fade into a slightly more yellow tinge. It mostly hangs freely, but a section is braided behind her right ear. She also has a noticeably large ahoge. On the left side of her head she has a red ribbon tied in her hair and she wears her Royal Armament, which is a jewel-looking tiara.
+                            She wears a blue and white blouse with a window cut around the collarbone area. On her right shoulder is a large armor plate. She has white gloves on both of her hands and a black sleeve that goes up her entire right arm. 
+                            She wields a giant sword, which has a bitemark on the blade.
+                        </p>
+                </div>
+                <div id="content-history">
+                    <h3>3. Lịch sử phát triển nhân vật</h3>
+                    <p>
+                        <b>Arc 1</b>Pecorine first logged in to the Legend of Astrum after the events of Princess Connect. She met Yuuki and Hiyori, who both taught her how to play the game. In Princess Connect Re:Dive, Pecorine serves
+                    as the Princess of Landsol, and is the founder and leader of the guild 'Gourmet Edifice'. Pecorine possesses a unique ability with the use of her Royal Armament (王家の装備), which greatly boosts her physical capabilities; however, it drains
+                    her stamina in return. One day after having an outdoors bath, Pecorine comes under the attack of a monster. With her Royal Armament, she was able to make short work of it, but nearly collapses from hunger and fatigue shortly afterwards.
+                    While wondering through the forest, she runs into Kokkoro and Yuuki. After consuming Kokkoro's meal that was prepared for Yuuki, Yui runs into the group, under attack by a large horde of monsters. The party fight off the monsters and
+                    find an unconscious girl, left in their wake. The group picks up the girl and head safely back to the city of Landsol, where they part ways with Yui. The girl reveals her name to be Kyaru, and the four of them form the guild Gourmet
+                    Edifice, acquiring a guild house that is managed by Karin. Pecorine and the rest of her guild travel around Astraea during an unspecified time period in search of exotic foods. This led them to clash against numerous boss monsters,
+                    all of which fell to the guild's combined strength and were consumed shortly afterwards. When not going on adventures with her friends, Pecorine works part-time serving meals at a restaurant, and gets treated to free meals in return.
+                    <b>Arc 2</b>Pecorine has taken back her role as Princess and is once more going by the name 'Eustiana'. She is put in charge of making the decisions in regards to the rebuilding of Landsol. Upon hearing about Yuuki's condition, she
+                    works to gain some magic tools from the vault to hopefully discover a cure. Though on her way to deliver said magic tools, she is distracted by the festival food and is found by the members of Gourmet Edifice and Twinkle Wish enjoying
+                    some meat pies. Unfortunately the magic tools she brought for Yuuki proved ineffective (at the moment) and while receiving a lecture from Creditta about favouring these 'commoners', the plaza is attacked by Kariza and his monsters.
+                    Though Pecorine insists on joining the fight, she is encouraged by Goushin and Kyaru to instead retreat so that she may perform her role as Princess. After the battle is resolved, Pecorine is seen attending a meeting as they discuss
+                    how they are to handle the following recovery. There she is met by Neneka who warns her of a fore-coming disaster. Upon Kariza's return, Pecorine appears once more with the knowledge from Neneka. After a moment of confusion, she is
+                    able to transform alongside Yui into her Princess Form. In this new form she and Yui are able to easily defeat Kariza's powered up monsters.
+                    </p>
+                </div>
+                <div id="Trong đời sống thật"></div>
+                <p>Pecorine is a human-race member in the game with long, orange hair and light blue eyes. Her hair extends below her waist and appears to fade into a slightly more yellow tinge. It mostly hangs freely, but a section is braided behind her
+                    right ear. She also has a noticeably large ahoge. On the left side of her head she has a red ribbon tied in her hair and she wears her Royal Armament, which is a jewel-looking tiara. She wears a blue and white blouse with a window
+                    cut around the collarbone area. On her right shoulder is a large armor plate. She has white gloves on both of her hands and a black sleeve that goes up her entire right arm. She wields a giant sword, which has a bitemark on the blade.
+                    Pecorine is a human-race member in the game with long, orange hair and light blue eyes. Her hair extends below her waist and appears to fade into a slightly more yellow tinge. It mostly hangs freely, but a section is braided behind
+                    her right ear. She also has a noticeably large ahoge. On the left side of her head she has a red ribbon tied in her hair and she wears her Royal Armament, which is a jewel-looking tiara. She wears a blue and white blouse with a window
+                    cut around the collarbone area. On her right shoulder is a large armor plate. She has white gloves on both of her hands and a black sleeve that goes up her entire right arm. She wields a giant sword, which has a bitemark on the blade.
+                    Pecorine is a human-race member in the game with long, orange hair and light blue eyes. Her hair extends below her waist and appears to fade into a slightly more yellow tinge. It mostly hangs freely, but a section is braided behind
+                    her right ear. She also has a noticeably large ahoge. On the left side of her head she has a red ribbon tied in her hair and she wears her Royal Armament, which is a jewel-looking tiara. She wears a blue and white blouse with a window
+                    cut around the collarbone area. On her right shoulder is a large armor plate. She has white gloves on both of her hands and a black sleeve that goes up her entire right arm. She wields a giant sword, which has a bitemark on the blade.
+                    Pecorine is a human-race member in the game with long, orange hair and light blue eyes. Her hair extends below her waist and appears to fade into a slightly more yellow tinge. It mostly hangs freely, but a section is braided behind
+                    her right ear. She also has a noticeably large ahoge. On the left side of her head she has a red ribbon tied in her hair and she wears her Royal Armament, which is a jewel-looking tiara. She wears a blue and white blouse with a window
+                    cut around the collarbone area. On her right shoulder is a large armor plate. She has white gloves on both of her hands and a black sleeve that goes up her entire right arm. She wields a giant sword, which has a bitemark on the blade.
+                    Pecorine is a human-race member in the game with long, orange hair and light blue eyes. Her hair extends below her waist and appears to fade into a slightly more yellow tinge. It mostly hangs freely, but a section is braided behind
+                    her right ear. She also has a noticeably large ahoge. On the left side of her head she has a red ribbon tied in her hair and she wears her Royal Armament, which is a jewel-looking tiara. She wears a blue and white blouse with a window
+                    cut around the collarbone area. On her right shoulder is a large armor plate. She has white gloves on both of her hands and a black sleeve that goes up her entire right arm. She wields a giant sword, which has a bitemark on the blade.
+                    Pecorine is a human-race member in the game with long, orange hair and light blue eyes. Her hair extends below her waist and appears to fade into a slightly more yellow tinge. It mostly hangs freely, but a section is braided behind
+                    her right ear. She also has a noticeably large ahoge. On the left side of her head she has a red ribbon tied in her hair and she wears her Royal Armament, which is a jewel-looking tiara. She wears a blue and white blouse with a window
+                    cut around the collarbone area. On her right shoulder is a large armor plate. She has white gloves on both of her hands and a black sleeve that goes up her entire right arm. She wields a giant sword, which has a bitemark on the blade.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginRight = "50px";
+        document.getElementById("header").style.marginRight = "50px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("header").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "150px";
+        document.getElementById("main").style.marginRight = "150px";
+        document.getElementById("header").style.marginLeft = "150px";
+        document.getElementById("header").style.marginRight = "150px";
+    }
+
+    function click() {
+
+    }
+</script>
