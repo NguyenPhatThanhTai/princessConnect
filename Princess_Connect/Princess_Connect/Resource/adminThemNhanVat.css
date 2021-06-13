@@ -134,6 +134,33 @@ footer {
         color: whitesmoke;
     }
 
+    #main #table-character {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+        #main #table-character #list-character {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            overflow-x: scroll;
+        }
+
+            #main #table-character #list-character th {
+                background-color: #F65091;
+                color: whi;
+            }
+
+            #main #table-character #list-character td img {
+                border: 5px solid pink;
+            }
+
+            #main #table-character #list-character td,
+            #main #table-character #list-character th {
+                border: 3px solid pink;
+                padding: 8px;
+            }
+
 @media screen and (max-width: 600px) {
     #main {
         margin: auto;

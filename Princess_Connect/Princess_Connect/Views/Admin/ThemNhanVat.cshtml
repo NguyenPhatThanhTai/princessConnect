@@ -102,6 +102,31 @@
 
     </div>
 </div>
+<div id="table-character">
+    <table id="list-character">
+        <tr>
+            <th>Mã nhân vật</th>
+            <th>Tên nhân vật</th>
+            <th>Bang hội</th>
+            <th>Hình ảnh</th>
+            <th>Chỉnh sửa</th>
+        </tr>
+        @foreach (var item in ViewBag.list)
+        {
+            <tr>
+                <td>@item.SQL_Character.Character_Id</td>
+                <td>@item.SQL_Character.Character_Name</td>
+                <td>Bang hội 1</td>
+                <td><a href="@Url.Action("ChiTiet", "Character", new { NV = item.SQL_Character.Character_Id })"><img width="70" src="~/Image/@item.SQL_Character.Character_Picture"></a></td>
+                <td>
+                    <a href="#">Chỉnh sửa | </a>
+                    <a href="#" style="color: red;">Xoá</a>
+                </td>
+            </tr>
+
+        }
+    </table>
+</div>
 
 <script>
     var loadFileIcon = function (event) {

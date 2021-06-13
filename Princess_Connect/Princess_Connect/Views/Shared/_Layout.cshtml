@@ -3,9 +3,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="~/Resource/Style.css">
-    <link rel="stylesheet" href="~/Resource/detailStyle.css">
-    @Styles.Render("~/Resource/css")
+    <link rel="stylesheet" href="~/Resource/style.css">
+    @*<link rel="stylesheet" href="~/Resource/detailStyle.css">*@
+    @RenderSection("detail", false)
     @*@Scripts.Render("~/bundles/modernizr")*@
 </head>
 

@@ -15,7 +15,7 @@ namespace Princess_Connect.Controllers
         public ActionResult TrangChu()
         {
             List<SQL_Story> list = new DataModel().getAll();
-            ViewBag.list = list;
+            //ViewBag.list = list;
             return View(list);
         }
 
