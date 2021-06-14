@@ -3,6 +3,7 @@ body {
     background-image: url("Wiki-background.jpg");
     background-attachment: fixed;
     transition: 0.5s;
+    text-align: c;
 }
 
 
@@ -186,6 +187,17 @@ body {
 
 /* danh sách nhân vật */
 
+#main-content {
+    display: grid;
+    grid-template-areas: 'middle right';
+}
+
+#content {
+    margin-left: 25px;
+    grid-area: middle;
+    width: 800px;
+}
+
 #content p {
     display: block;
     background-color: rgb(144, 211, 231);
@@ -225,10 +237,40 @@ body {
     color: black;
 }
 
+#visisted {
+    margin-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    grid-area: right;
+    border: 5px solid rgb(224, 112, 130);
+    background-color: rgba(219, 123, 139, 0.575);
+    width: 270px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#visisted #count {
+    text-align: center;
+    color: whitesmoke;
+    width: 300px;
+    background-color: rgba(51, 140, 212, 0.575);
+}
+
+#visisted #visisted-right {
+    width: 200px;
+}
+
+#visisted #visisted-left {
+    width: 30px;
+    font-weight: normal;
+}
+
 
 /* reponsible */
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     #main {
         margin: auto;
     }
@@ -271,5 +313,21 @@ body {
     }
     #main #picture img {
         width: 370px;
+    }
+    #content {
+        margin-left: 25px;
+        margin-right: 25px;
+        grid-area: middle;
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #main #header-main {
+        display: grid;
+        grid-template-areas: 'middle''right';
+    }
+    #visisted {
+        display: none;
     }
 }
