@@ -14,7 +14,7 @@
         <header>
             <div class="topnav">
                 <a id="logo" class="active" href="#home" onclick="openNav()">&#9776; </a>
-                <img src="~/Resource/Wiki-wordmark.png">
+                <img id="logo-image" src="~/Resource/Wiki-wordmark.png">
                 <!-- <a href="#news">News</a>
                 <a href="#contact">Contact</a>
                 <a href="#about">About</a> -->
@@ -51,11 +51,10 @@
     <div id="main">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Princess_Connect</p>
-        </footer>
     </div>
-
+    <footer>
+        &copy; Bản quyền thuộc về DHTT - &reg;Phát triển bởi DHTT-Design
+    </footer>
 </body>
 @*@Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")

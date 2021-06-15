@@ -5,8 +5,6 @@ body {
     transition: 0.5s;
     text-align: c;
 }
-
-
 /* slide bar bên trái */
 
 .sidenav {
@@ -24,29 +22,27 @@ body {
     margin-top: 10px;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.5s;
-}
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.5s;
+    }
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
 
-.sidenav .closebtn {
-    color: rgb(131, 56, 112);
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-
+    .sidenav .closebtn {
+        color: rgb(131, 56, 112);
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
 /* Header đầu trang (logo...) */
 
 .topnav {
@@ -56,37 +52,37 @@ body {
     border-top: 5px solid pink;
 }
 
-.topnav img {
-    transition: 0.5s;
-    width: 300px;
-    float: left;
-}
+    .topnav #logo-image {
+        transition: 0.5s;
+        width: 300px;
+        float: left;
+    }
 
-.topnav a {
-    transition: 0.5s;
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: wavy;
-    font-size: 15px;
-}
+    .topnav a {
+        transition: 0.5s;
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 20px 16px;
+        text-decoration: wavy;
+        font-size: 15px;
+    }
 
-.topnav #logo {
-    transition: 0.5s;
-    padding: 40px 16px;
-    background-color: pink;
-}
+    .topnav #logo {
+        transition: 0.5s;
+        padding: 40px 16px;
+        background-color: pink;
+    }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
 
-.topnav a.active {
-    background-color: pink;
-    color: white;
-}
+    .topnav a.active {
+        background-color: pink;
+        color: white;
+    }
 
 .ThanhChucNang {
     transition: 0.5s;
@@ -94,22 +90,24 @@ body {
     text-align: center;
     padding: 5px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.ThanhChucNang a {
-    transition: 0.5s;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: none;
-    color: white;
-}
+    .ThanhChucNang a {
+        transition: 0.5s;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+        color: white;
+    }
 
-.ThanhChucNang a:hover {
-    background-color: pink;
-    color: black;
-}
+        .ThanhChucNang a:hover {
+            background-color: pink;
+            color: black;
+            font-size: 20px;
+        }
 
 #header {
     margin-left: 150px;
@@ -117,8 +115,6 @@ body {
     transition: margin-right .5s;
     transition: margin-left .5s;
 }
-
-
 /* Nội dung content */
 
 #main {
@@ -131,65 +127,88 @@ body {
     transition: margin-left .5s;
 }
 
-#main #picture {
-    transition: 0.5s;
-    grid-area: middle;
-    margin-top: 10px;
-    text-align: center;
-    margin-left: 17px;
-}
+    #main #picture {
+        transition: 0.5s;
+        grid-area: middle;
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 17px;
+    }
 
-#main #picture img {
-    transition: 0.5s;
-    width: 800px;
-}
+        #main #picture img {
+            transition: 0.5s;
+            width: 800px;
+        }
 
-#main .right-slide {
-    transition: 0.5s;
-    text-align: center;
-    grid-area: right;
-    border: 5px solid pink;
-    margin-top: 10px;
-    margin-right: 17px;
-    align-items: center;
-}
+    #main .right-slide {
+        transition: 0.5s;
+        text-align: center;
+        grid-area: right;
+        border: 5px solid pink;
+        margin-top: 10px;
+        margin-right: 17px;
+        align-items: center;
+    }
 
-#main .right-slide b {
-    display: block;
-    transition: 0.5s;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: rgb(98, 184, 233);
-    color: rgb(108, 97, 109);
-}
+        #main .right-slide b {
+            display: block;
+            transition: 0.5s;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: rgb(98, 184, 233);
+            color: rgb(108, 97, 109);
+        }
 
-#main .right-slide #list {
-    transition: 0.5s;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+        #main .right-slide #list {
+            transition: 0.5s;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            transition: 0.5s;
+        }
 
-#main .right-slide #list img {
-    transition: 0.5s;
-    width: 100px;
-    padding-top: 20px;
-    margin: 5px;
-}
+            #main .right-slide #list a {
+                text-decoration: none;
+                transition: 0.5s;
+            }
 
-#main #header-main {
-    transition: 0.5s;
-    display: grid;
-    grid-template-areas: 'middle right';
-}
+            #main .right-slide #list:hover #top {
+                filter: blur(3px);
+                opacity: .5;
+                transform: scale(.98);
+                box-shadow: none;
+            }
 
+            #main .right-slide #list a:hover #top:hover {
+                background-color: pink;
+                border: 2px solid rgb(241, 149, 164);
+                color: white;
+                box-shadow: 5px 10px 20px 20px rgb(241, 149, 164);
+                transition: 0.5s;
+                margin: 10px;
+                transform: scale(1);
+                filter: blur(0px);
+                opacity: 1;
+            }
 
+            #main .right-slide #list img {
+                transition: 0.5s;
+                width: 80px;
+                padding-top: 20px;
+                margin: 5px;
+            }
+
+    #main #header-main {
+        transition: 0.5s;
+        display: grid;
+        grid-template-areas: 'middle right';
+    }
 /* danh sách nhân vật */
 
 #main-content {
     display: grid;
-    grid-template-areas: 'middle right';
+    grid-template-areas: 'middle right''middle fb';
 }
 
 #content {
@@ -198,50 +217,56 @@ body {
     width: 800px;
 }
 
-#content p {
-    display: block;
-    background-color: rgb(144, 211, 231);
-    color: white;
-    text-align: center;
-    font-size: 30px;
-}
+    #content p {
+        display: block;
+        background-color: rgb(144, 211, 231);
+        box-shadow: 5px 10px 8px 10px rgba(63, 123, 163, 0.589);
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
 
-#content #guild-container {
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: left;
-    padding-left: 10px;
-}
+    #content #guild-container {
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding-left: 10px;
+    }
 
-#content #guild-container a {
-    transition: 0.5s;
-    text-align: center;
-    text-decoration: none;
-}
+        #content #guild-container a {
+            transition: 0.5s;
+            text-align: center;
+            text-decoration: none;
+        }
 
-#content #guild-container a:hover {
-    background-color: pink;
-    border: 2px solid rgb(241, 149, 164);
-    color: white;
-}
+            #content #guild-container a:hover {
+                background-color: pink;
+                border: 2px solid rgb(241, 149, 164);
+                color: white;
+                box-shadow: 5px 10px 20px 20px rgb(241, 149, 164);
+                margin: 20px;
+            }
 
-#content #guild-container img {
-    transition: 0.5s;
-    margin: 10px;
-}
+        #content #guild-container img {
+            transition: 0.5s;
+            margin: 10px;
+        }
 
-#content #guild-container h3 {
-    text-align: center;
-    color: black;
+        #content #guild-container h3 {
+            text-align: center;
+            color: black;
+        }
+
+#right-content {
+    grid-area: right;
 }
 
 #visisted {
     margin-top: 30px;
     padding-right: 30px;
     padding-left: 30px;
-    grid-area: right;
     border: 5px solid rgb(224, 112, 130);
     background-color: rgba(219, 123, 139, 0.575);
     width: 270px;
@@ -249,58 +274,89 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-shadow: 5px 10px 10px 10px rgba(185, 113, 125, 0.589);
 }
 
-#visisted #count {
+    #visisted #count {
+        margin-top: 20px;
+        text-align: center;
+        color: whitesmoke;
+        width: 300px;
+        background-color: rgba(231, 162, 59, 0.575);
+    }
+
+    #visisted #visisted-right {
+        width: 200px;
+    }
+
+    #visisted #visisted-left {
+        width: 30px;
+        font-weight: normal;
+    }
+
+#facebook {
     text-align: center;
-    color: whitesmoke;
-    width: 300px;
-    background-color: rgba(51, 140, 212, 0.575);
+    margin-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    grid-area: fb;
+    background-color: #81818180;
+    width: 270px;
+    height: 300px;
+    border: 5px solid rgb(78, 146, 209);
+    box-shadow: 5px 10px 8px 10px rgba(63, 123, 163, 0.589);
 }
+/* footer */
 
-#visisted #visisted-right {
-    width: 200px;
+footer {
+    background-color: #81818196;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 10px;
+    padding: 30px;
 }
-
-#visisted #visisted-left {
-    width: 30px;
-    font-weight: normal;
-}
-
-
 /* reponsible */
 
 @media only screen and (max-width: 600px) {
     #main {
         margin: auto;
     }
+
     #header {
         margin: 0;
     }
-    #header .topnav #logo {
-        display: none;
-    }
-    #header .topnav img {
-        width: 400px;
-    }
+
+        #header .topnav #logo {
+            display: none;
+        }
+
+        #header .topnav img {
+            width: 400px;
+        }
+
     #main #header-main {
         display: grid;
         grid-template-areas: 'middle''right';
     }
+
     .topnav {
         margin: 0;
     }
-    .topnav h1 {
-        font-size: 25px;
-    }
+
+        .topnav h1 {
+            font-size: 25px;
+        }
+
     .ThanhChucNang {
         margin: 0;
     }
+
     #main #picture {
         grid-area: middle;
         margin-top: 10px;
         margin-left: 0;
     }
+
     #main .right-slide {
         transition: 0.5s;
         text-align: center;
@@ -311,23 +367,34 @@ body {
         margin: 20px;
         align-items: center;
     }
+
     #main #picture img {
         width: 370px;
     }
+
     #content {
         margin-left: 25px;
         margin-right: 25px;
         grid-area: middle;
-        width: fit-content;
+        width: fit-content
+    }
+
+    #visisted {
+        display: none;
+    }
+
+    #facebook {
+        display: none;
     }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1300px) and (min-width: 600px) {
     #main #header-main {
         display: grid;
         grid-template-areas: 'middle''right';
     }
-    #visisted {
-        display: none;
+
+    #content {
+        width: 500px;
     }
 }
