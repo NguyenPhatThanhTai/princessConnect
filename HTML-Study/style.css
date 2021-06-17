@@ -50,39 +50,58 @@
         overflow: hidden;
         background-color: white;
         border-top: 5px solid pink;
+        height: 80px;
     }
     
-    .topnav #logo-image {
+    .topnav #logo-left {
+        float: left;
+        text-align: center;
+        width: 50px;
+        height: 80px;
+    }
+    
+    .topnav #logo-left #logo {
+        transition: 0.5s;
+        background-color: pink;
+        font-size: 15px;
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 35px;
+    }
+    
+    .topnav #logo-left a {
+        text-decoration: none;
+    }
+    
+    .topnav #login-right {
+        float: right;
+        text-align: right;
+    }
+    
+    .topnav #login-right a {
+        text-decoration: none;
+        color: rgba(59, 56, 56, 0.753);
+        padding: 4px;
+        background-color: pink;
+    }
+    
+    .topnav #login-right p {
+        margin-right: 10px;
+    }
+    
+    .topnav #img-left {
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .topnav #img-left img {
         transition: 0.5s;
         width: 300px;
-        float: left;
     }
-    
-    .topnav a {
-        transition: 0.5s;
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 20px 16px;
-        text-decoration: wavy;
-        font-size: 15px;
-    }
-    
-    .topnav #logo {
-        transition: 0.5s;
-        padding: 40px 16px;
-        background-color: pink;
-    }
-    
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-    
-    .topnav a.active {
-        background-color: pink;
-        color: white;
-    }
+    /* .topnav #img-left h2 {
+        font-size: ;
+    } */
     
     .ThanhChucNang {
         transition: 0.5s;
@@ -132,7 +151,13 @@
         grid-area: middle;
         margin-top: 10px;
         text-align: center;
-        margin-left: 17px;
+        transition: 0.5s;
+    }
+    
+    #myVideo {
+        transition: 0.5s;
+        height: 445px;
+        border: 5px solid pink;
     }
     
     #main #picture img {
@@ -236,16 +261,16 @@
     }
     
     #content #guild-container a {
-        transition: 0.5s;
+        transition: 0.3s;
         text-align: center;
         text-decoration: none;
     }
     
     #content #guild-container a:hover {
-        background-color: pink;
-        border: 2px solid rgb(241, 149, 164);
+        background-color: rgba(255, 192, 203, 0.555);
+        border: 2px solid rgba(241, 149, 164, 0.548);
         color: white;
-        box-shadow: 5px 10px 20px 20px rgb(241, 149, 164);
+        box-shadow: 5px 10px 20px 20px rgba(199, 140, 150, 0.507);
         margin: 20px;
     }
     
@@ -306,6 +331,11 @@
         border: 5px solid rgb(78, 146, 209);
         box-shadow: 5px 10px 8px 10px rgba(63, 123, 163, 0.589);
     }
+    
+    #facebook img {
+        text-align: center;
+        margin-top: 50px;
+    }
     /* footer */
     
     footer {
@@ -348,6 +378,9 @@
             margin-top: 10px;
             margin-left: 0;
         }
+        #myVideo {
+            height: 200px;
+        }
         #main .right-slide {
             transition: 0.5s;
             text-align: center;
@@ -375,7 +408,7 @@
         }
     }
     
-    @media only screen and (max-width: 1300px) and (min-width: 600px) {
+    @media only screen and (max-width: 1366px) and (min-width: 768px) {
         #main #header-main {
             display: grid;
             grid-template-areas: 'middle''right';

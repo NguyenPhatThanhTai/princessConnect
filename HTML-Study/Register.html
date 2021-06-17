@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register</title>
+    <style>
+        body {
+            background-image: url("Wiki-background.jpg");
+            background-size: cover;
+        }
+        
+        #form-login #right {
+            float: left;
+            width: 500px;
+            height: 600px;
+            margin-top: 5%;
+            text-align: center;
+            box-shadow: 5px 10px 20px 20px rgba(0, 0, 0, 0.507);
+            border-radius: 25px;
+            transition: 0.5s;
+        }
+        
+        #form-login #left {
+            float: left;
+            margin-top: 10%;
+            margin-left: 5%;
+            transition: 0.5s;
+        }
+        
+        #form-login #left img {
+            width: 800px;
+            transition: 0.5s;
+        }
+        
+        #form-login #right h1 {
+            font-size: 50px;
+            color: rgb(107, 101, 105);
+            padding-top: 10px;
+            transition: 0.5s;
+        }
+        
+        #form-login #right form {
+            margin: 40px;
+            margin-top: 30px;
+            transition: 0.5s;
+        }
+        
+        #form-login #right #submit {
+            padding-top: 10px;
+            transition: 0.5s;
+        }
+        
+        #form-login #right #log {
+            background-color: rgb(59, 145, 105);
+            color: white;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        
+        #form-login #right #log:hover {
+            background-color: rgb(34, 119, 94);
+        }
+        
+        #form-login #right p {
+            color: white;
+            transition: 0.5s;
+        }
+        
+        #form-login #right a {
+            text-decoration: none;
+            color: pink;
+            transition: 0.5s;
+        }
+        
+        #form-login #right #usr:hover {
+            transition: 0.3s;
+            border: 3px solid rgba(255, 192, 203, 0.658);
+        }
+        
+        #form-login #right #usr:focus {
+            border: 3px solid rgba(255, 192, 203, 0.658);
+        }
+        
+        #form-login #right #pwd:hover {
+            transition: 0.3s;
+            border: 3px solid rgba(255, 192, 203, 0.658);
+        }
+        
+        #form-login #right #pwd:focus {
+            border: 3px solid rgba(255, 192, 203, 0.658);
+        }
+        
+        #form-login #right #col {
+            display: block;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        
+        .fb {
+            background-color: rgb(44, 98, 168);
+            width: 400px;
+            margin-bottom: 10px;
+        }
+        
+        .google {
+            background-color: rgb(206, 65, 94);
+            width: 400px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            #form-login #left {
+                float: left;
+                margin-top: 10%;
+            }
+            #form-login #left img {
+                width: 350px;
+            }
+            #form-login #right #logo {
+                width: 300px;
+            }
+            #form-login #right {
+                float: left;
+                width: 370px;
+                height: 570px;
+                margin-top: 10%;
+                text-align: center;
+                box-shadow: 5px 10px 20px 20px rgba(0, 0, 0, 0.507);
+                border-radius: 25px;
+                margin-left: 5%;
+                margin-bottom: 30px;
+            }
+            .fb {
+                background-color: rgb(44, 98, 168);
+                width: 300px;
+                margin-bottom: 10px;
+            }
+            .google {
+                background-color: rgb(206, 65, 94);
+                width: 300px;
+            }
+        }
+        
+        @media only screen and (max-width: 1367px) and (min-width: 767px) {
+            #form-login #left img {
+                width: 650px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-login">
+        <div id="left">
+            <img src="home_kv_chara.png">
+        </div>
+        <div id="right">
+            <img id="logo" width="400px" src="Wiki-wordmark.png">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="usr" placeholder="Người dùng" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="pwd" placeholder="Đầy đủ tên" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" id="pwd" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="pwd" placeholder="Địa chỉ" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="pwd" placeholder="Số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="pwd" placeholder="Email" required>
+                </div>
+                <div class="form-group submit">
+                    <input type="submit" size="30" class="form-control submit" id="log" value="Đăng ký" required>
+                </div>
+                <p>Nếu đã có tài khoản thì
+                    <a href="#">đăng nhập</a> nha!
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
