@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.5.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url("Wiki-background.jpg");
+            background-attachment: fixed;
+        }
+        
+        footer {
+            background-color: rgba(50, 50, 53, 0.7);
+            text-align: center;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        
+        .header {
+            grid-area: header;
+            transition: 0.5s;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: white;
+            border-top: 5px solid pink;
+            margin-left: 150px;
+            margin-right: 150px;
+            transition: 0.5s;
+        }
+        
+        .topnav img {
+            width: 300px;
+            float: left;
+            transition: 0.5s;
+        }
+        
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: wavy;
+            font-size: 15px;
+            transition: 0.5s;
+        }
+        
+        .topnav #logo {
+            padding: 40px 16px;
+            background-color: pink;
+            transition: 0.5s;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: pink;
+            color: white;
+        }
+        
+        .ThanhChucNang {
+            background-color: rgb(229, 119, 233);
+            text-align: center;
+            padding: 5px;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        
+        .ThanhChucNang a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+            transition: 0.5s;
+        }
+        
+        .ThanhChucNang a:hover {
+            background-color: pink;
+            color: black;
+        }
+        
+        #main {
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+            background-color: rgba(248, 248, 255, 0.7);
+            transition: margin-left .5s;
+            transition: 0.5s;
+        }
+        
+        #main #tieude {
+            padding-top: 20px;
+            border-bottom: 2px solid black;
+            margin-left: 20px;
+            margin-right: 100px;
+            transition: 0.5s;
+        }
+        
+        #main #detail-picture {
+            margin: 20px;
+            transition: 0.5s;
+        }
+        
+        #main #detail-picture #pic {
+            margin-left: 30px;
+            background-color: rgba(121, 197, 211, 0.466);
+            transition: 0.5s;
+        }
+        
+        #main #detail-picture #pic #image img {
+            width: 300px;
+            margin: 20px;
+            transition: 0.5s;
+        }
+        
+        #main #detail-picture #pic #detail {
+            display: block;
+            text-align: center;
+            background-color: rgba(229, 145, 237, 0.712);
+            transition: 0.5s;
+        }
+        
+        #main #detail-picture #pic #detail p {
+            font-size: 20px;
+            padding: 10px;
+            color: white;
+            transition: 0.5s;
+        }
+        
+        #main #detail-picture #pic #detail input {
+            padding: 10px;
+            color: rgb(255, 255, 255);
+            transition: 0.5s;
+        }
+        
+        #main #detail-picture {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            transition: 0.5s;
+        }
+        
+        #main #card-picture {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            transition: 0.5s;
+        }
+        
+        #main #card-picture #card {
+            margin: 3px;
+            transition: 0.5s;
+        }
+        
+        #main #card-picture #card img {
+            width: 250px;
+            margin-top: 20px;
+            transition: 0.5s;
+        }
+        
+        #main #addCard {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 300px;
+            margin-right: 300px;
+            border: 5px solid pink;
+            transition: 0.5s;
+        }
+        
+        #main #addCard img {
+            margin: 30px;
+            width: 300px;
+            transition: 0.5s;
+        }
+        
+        #main #addCard input {
+            margin: 10px;
+            transition: 0.5s;
+        }
+        
+        @media screen and (max-width: 600px) {
+            #main {
+                margin: auto;
+            }
+            .topnav {
+                display: block;
+                margin: auto;
+                align-items: center;
+            }
+            .topnav img {
+                width: 400px;
+            }
+            .topnav h1 {
+                font-size: 30px;
+            }
+            .ThanhChucNang {
+                margin: auto;
+                padding: auto;
+            }
+            footer {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 10px;
+            }
+            #main #tieude {
+                padding-top: 20px;
+                border-bottom: 2px solid black;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            #main #detail-picture #pic {
+                margin-left: 30px;
+                margin-bottom: 30px;
+            }
+            #main #addCard {
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: 30px;
+                margin-right: 30px;
+                border: 5px solid pink;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gird">
+        <div class="header">
+            <header>
+                <div class="topnav">
+                    <img src="Wiki-wordmark.png">
+                    <!-- <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a> -->
+                    <h1 style="color: #F65091; text-align: center;">Trang quản lý của Admin</h1>
+                    <p style="color: rgb(153, 65, 149);text-align: center;">Admin: Nguyễn Phát Thành Tài</p>
+                </div>
+            </header>
+
+            <div class="ThanhChucNang">
+                <a href="#">Quản lý nhân vật</a>
+                <a href="#">Quản lý guild</a>
+                <a href="#">Quản lý hình</a>
+                <a href="#">Thống kê</a>
+                <a href="#">Quản lý người dùng</a>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="pickChar">
+                <select name="char" class="custom-select mb-3" required>
+                        <option selected>Chọn nhân vật</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                        <option value="volvo">guild 1</option>
+                </select>
+            </div>
+            <div id="tieude">
+                <h4>Ảnh trang chi tiết</h4>
+            </div>
+            <div id="detail-picture">
+                <div id="pic">
+                    <div id="detail">
+                        <p>Mùa hè</p>
+                    </div>
+                    <div id="image">
+                        <img id="load1" src="Nozomi-christmas-sprite-normal.png">
+                    </div>
+                    <div id="detail">
+                        <input type="file" accept="image/*" onchange="loadFile(event, 'load1')">
+                    </div>
+                </div>
+                <div id="pic">
+                    <div id="detail">
+                        <p>Mùa hè</p>
+                    </div>
+                    <div id="image">
+                        <img id="load2" src="Nozomi-christmas-sprite-normal.png">
+                    </div>
+                    <div id="detail">
+                        <input type="file" accept="image/*" onchange="loadFile(event, 'load2')">
+                    </div>
+                </div>
+                <div id="pic">
+                    <div id="detail">
+                        <p>Mùa hè</p>
+                    </div>
+                    <div id="image">
+                        <img id="load3" src="Nozomi-christmas-sprite-normal.png">
+                    </div>
+                    <div id="detail">
+                        <input type="file" accept="image/*" onchange="loadFile(event, 'load3')">
+                    </div>
+                </div>
+            </div>
+            <div id="tieude">
+                <h4>Card của nhân vật</h4>
+            </div>
+            <div id="addCard">
+                <img id="addNewCard" src="https://redive.estertion.win/card/full/102961.webp@w400">
+                <input type="file" accept="image/*" onchange="loadFile(event, 'addNewCard')">
+                <button type="button" class="btn btn-success">Thêm card</button>
+            </div>
+            <div id="card-picture">
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/102961.webp@w400">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/102561.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/115931.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/103661.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/106431.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/113931.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/113631.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/113531.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/106631.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/113031.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/104661.webp">
+                </div>
+                <div id=card>
+                    <img src="https://redive.estertion.win/card/full/112431.webp">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <coppy-right>Design by DHT team</coppy-right>
+        </footer>
+</body>
+
+<script>
+    var loadFile = function(event, load) {
+        var output = document.getElementById(load);
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+</script>
+
+<script>
+</script>
+<!-- <script src=" http://code.jquery.com/jquery-3.1.1.js ">
+</script>
+<script type="text/javascript ">
+    $i = 0;
+
+    function doRefresh() {
+        $i = $i + 1;
+        document.getElementById("here ").innerHTML = $i;
+    }
+    $(function() {
+        setInterval(doRefresh, 3000);
+    });
+</script> -->

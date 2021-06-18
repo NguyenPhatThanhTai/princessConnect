@@ -19,10 +19,12 @@
             margin-left: 150px;
             margin-right: 150px;
             margin-top: 10px;
+            transition: 0.5s;
         }
         
         .header {
             grid-area: header;
+            transition: 0.5s;
         }
         
         .topnav {
@@ -31,11 +33,13 @@
             border-top: 5px solid pink;
             margin-left: 150px;
             margin-right: 150px;
+            transition: 0.5s;
         }
         
         .topnav img {
             width: 300px;
             float: left;
+            transition: 0.5s;
         }
         
         .topnav a {
@@ -45,6 +49,7 @@
             padding: 20px 16px;
             text-decoration: wavy;
             font-size: 15px;
+            transition: 0.5s;
         }
         
         .topnav #logo {
@@ -69,6 +74,7 @@
             margin-left: 150px;
             margin-right: 150px;
             margin-top: 10px;
+            transition: 0.5s;
         }
         
         .ThanhChucNang a {
@@ -78,6 +84,7 @@
             padding-right: 10px;
             text-decoration: none;
             color: white;
+            transition: 0.5s;
         }
         
         .ThanhChucNang a:hover {
@@ -91,40 +98,32 @@
             margin-top: 10px;
             background-color: rgba(248, 248, 255, 0.7);
             transition: margin-left .5s;
+            transition: 0.5s;
         }
         
         #main #content {
             display: grid;
             grid-template-areas: 'left right';
+            transition: 0.5s;
         }
         
         #main #content #left-box {
             grid-area: left;
             text-align: center;
             margin: 20px;
+            transition: 0.5s;
+        }
+        
+        #main #content #left-box img {
+            width: 500px;
+            transition: 0.5s;
         }
         
         #main #content #right-box {
             grid-area: right;
             text-align: center;
             margin: 20px;
-        }
-        
-        #main #content #left-box #icon-image {
-            margin-top: 10px;
-        }
-        
-        #main #content #left-box #icon-image img {
-            margin-top: 30px;
-            border: 5px solid pink;
-        }
-        
-        #main #content #left-box #backgroud-image {
-            margin-top: 30px;
-        }
-        
-        #main #content #left-box input {
-            padding-top: 10px;
+            transition: 0.5s;
         }
         
         #main #content #right-box #input {
@@ -133,20 +132,26 @@
             align-content: stretch;
             margin-top: 10px;
             margin-bottom: 10px;
+            transition: 0.5s;
         }
         
         #main #content #right-box #textarea {
             margin-bottom: 30px;
+            transition: 0.5s;
         }
         
         #main #right-box .submit {
             background-color: pink;
             color: whitesmoke;
+            transition: 0.5s;
         }
         
         #main #table-character {
+            margin-top: 30px;
             margin-left: 30px;
             margin-right: 30px;
+            padding-bottom: 10px;
+            transition: 0.5s;
         }
         
         #main #table-character #list-character {
@@ -154,21 +159,21 @@
             width: 100%;
             text-align: center;
             overflow-x: scroll;
+            margin-bottom: 20px;
+            transition: 0.5s;
         }
         
         #main #table-character #list-character th {
             background-color: #F65091;
-            color: whi;
-        }
-        
-        #main #table-character #list-character td img {
-            border: 5px solid pink;
+            color: white;
+            transition: 0.5s;
         }
         
         #main #table-character #list-character td,
         #main #table-character #list-character th {
             border: 3px solid pink;
             padding: 8px;
+            transition: 0.5s;
         }
         
         @media screen and (max-width: 600px) {
@@ -180,6 +185,9 @@
             }
             #main #content #left-box {
                 grid-area: left;
+            }
+            #main #content #left-box img {
+                width: 300px;
             }
             #main #content #right-box {
                 grid-area: right;
@@ -205,6 +213,11 @@
             .ThanhChucNang {
                 margin: auto;
                 padding: auto;
+            }
+            footer {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 10px;
             }
         }
     </style>
@@ -236,96 +249,17 @@
         <div id="main">
             <div id="content">
                 <div id="left-box">
-                    <div id="icon-image">
-                        <b>Icon cho nhân vật</b>
-                        <br>
-                        <img id="icon" width="128" height="128" src="https://redive.estertion.win/icon/unit/100531.webp">
-                        </br>
-                        <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFile(event)">
-                    </div>
-                    <div id="backgroud-image">
-                        <b>Ảnh nền cho nhân vật</b>
-                        <br>
-                        <img id="backgroud-image" width="300" height="300" src="https://static.wikia.nocookie.net/princess-connect/images/8/89/Pecorine-princess-sprite-normal.png/revision/latest/scale-to-width-down/310?cb=20210131045628">
-                        </br>
-                        <input type="file" accept="image/*" value="Chọn ảnh" onchange="loadFile(event)">
-                    </div>
+                    <img src="GourmetEdificeHeader.png">
                 </div>
                 <div id="right-box">
                     <form>
                         <div id="input">
                             <div class="form-group">
-                                <label for="usr">Tên:</label>
-                                <input type="text" size="50" class="form-control" id="usr" placeholder="Nhập tên nhân vật" required>
+                                <input type="text" size="100" class="form-control" id="usr" placeholder="Nhập tên bang hội" required>
                             </div>
-                            <div class="form-group">
-                                <label for="pwd">Chiều cao:</label>
-                                <input type="text" size="30" class="form-control" id="pwd" placeholder="Nhập chiều cao" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Cân nặng:</label>
-                                <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập cân nặng" required>
-                            </div>
-                        </div>
-                        <div id="input">
-                            <div class="form-group">
-                                <label for="pwd">Sinh nhật:</label>
-                                <input type="date" class="form-control" id="pwd" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Nhóm máu:</label>
-                                <input type="text" size="15" class="form-control" id="pwd" placeholder="Nhập nhóm máu" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Chủng tộc:</label>
-                                <input type="text" size="25" class="form-control" id="pwd" placeholder="Nhập chủng tộc" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Sở thích:</label>
-                                <input type="text" size="33" class="form-control" id="pwd" placeholder="Nhập sở thích" required>
-                            </div>
-                        </div>
-                        <div id="input">
-                            <div class="form-group">
-                                <label for="pwd">Lồng tiếng:</label>
-                                <input type="text" size="50" class="form-control" id="pwd" placeholder="Nhập người lồng tiếng" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Miêu tả:</label>
-                                <input type="text" size="30" class="form-control" id="pwd" placeholder="Nhập miêu tả" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Chi tiết:</label>
-                                <input type="text" size="20" class="form-control" id="pwd" placeholder="Nhập chi tiết" required>
-                            </div>
-                        </div>
-                        <div id="textarea">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="9" placeholder="Miêu tả chi tiết nhân vật..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <select name="cars" class="custom-select mb-3" required>
-                                <option selected>Chọn bang hội nhân vật</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                                <option value="volvo">guild 1</option>
-                              </select>
                         </div>
                         <div class="form-group submit">
-                            <input type="submit" size="30" class="form-control submit" id="pwd" value="Thêm nhân vật" required>
+                            <input type="submit" class="form-control submit" id="pwd" value="Thêm bang hội" required>
                         </div>
                     </form>
                 </div>
@@ -333,17 +267,17 @@
             <div id="table-character">
                 <table id="list-character">
                     <tr>
-                        <th>Mã nhân vật</th>
-                        <th>Tên nhân vật</th>
-                        <th>Bang hội</th>
-                        <th>Hình ảnh</th>
-                        <th>Chỉnh sửa</th>
+                        <th>Mã bang hội</th>
+                        <th>Tên bang hội</th>
+                        <th>Số thành viên hiện tại</th>
+                        <th>Ngày tạo</th>
+                        <th>Ghi chú</th>
                     </tr>
                     <tr>
                         <td>NV123</td>
-                        <td>Nhân vật 1</td>
                         <td>Bang hội 1</td>
-                        <td><img width="70" src="https://redive.estertion.win/icon/unit/100531.webp"></td>
+                        <td>100</td>
+                        <td>18/06/2021</td>
                         <td>
                             <a href="#">Chỉnh sửa | </a>
                             <a href="#" style="color: red;">Xoá</a>
@@ -351,9 +285,9 @@
                     </tr>
                     <tr>
                         <td>NV123</td>
-                        <td>Nhân vật 1</td>
                         <td>Bang hội 1</td>
-                        <td><img width="70" src="https://redive.estertion.win/icon/unit/100531.webp"></td>
+                        <td>100</td>
+                        <td>18/06/2021</td>
                         <td>
                             <a href="#">Chỉnh sửa | </a>
                             <a href="#" style="color: red;">Xoá</a>
@@ -361,9 +295,9 @@
                     </tr>
                     <tr>
                         <td>NV123</td>
-                        <td>Nhân vật 1</td>
                         <td>Bang hội 1</td>
-                        <td><img width="70" src="https://redive.estertion.win/icon/unit/100531.webp"></td>
+                        <td>100</td>
+                        <td>18/06/2021</td>
                         <td>
                             <a href="#">Chỉnh sửa | </a>
                             <a href="#" style="color: red;">Xoá</a>
@@ -371,9 +305,9 @@
                     </tr>
                     <tr>
                         <td>NV123</td>
-                        <td>Nhân vật 1</td>
                         <td>Bang hội 1</td>
-                        <td><img width="70" src="https://redive.estertion.win/icon/unit/100531.webp"></td>
+                        <td>100</td>
+                        <td>18/06/2021</td>
                         <td>
                             <a href="#">Chỉnh sửa | </a>
                             <a href="#" style="color: red;">Xoá</a>
@@ -381,9 +315,9 @@
                     </tr>
                     <tr>
                         <td>NV123</td>
-                        <td>Nhân vật 1</td>
                         <td>Bang hội 1</td>
-                        <td><img width="70" src="https://redive.estertion.win/icon/unit/100531.webp"></td>
+                        <td>100</td>
+                        <td>18/06/2021</td>
                         <td>
                             <a href="#">Chỉnh sửa | </a>
                             <a href="#" style="color: red;">Xoá</a>
