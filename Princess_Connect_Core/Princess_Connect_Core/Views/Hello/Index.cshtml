@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Princess_Connect_Core</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <form id="contact-form">
+        <input type="text" id="name" placeholder="name" />
+        <input type="text" id="name1" placeholder="name" />
+        <input type="text" id="name2" placeholder="name" />
+        <input type="submit" value="submit" />
+    </form>
+<h1 id="text">test</h1>
+</body>
+</html>
+<script>
+    $('#contact-form').on('submit', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var email = {
+            'name': $("#name").val(),
+            'name1': $("#name1").val(),
+            'name2': $("#name2").val(),
+        };
+        $.ajax({
+            url: "api/day",
+            type: "POST",
+            data: JSON.stringify(email),
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data)
+                document.getElementById("text").innerHTML = data
+            }
+        });
+    })
+</script>
