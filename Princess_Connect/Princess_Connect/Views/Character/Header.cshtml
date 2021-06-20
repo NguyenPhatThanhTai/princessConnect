@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="topnav">
+    <div id="logo-left">
+        <div id="logo" class="active" onclick="openNav()"><a href="#">&#9776; </a></div>
+    </div>
+    <div id="img-left">
+        <img id="logo-image" src="~/Resource/Wiki-wordmark.png">
+    </div>
+    <div id="img-left">
+        <h1 style="color: rgba(187, 93, 196, 0.692); text-align: center;">Giới thiệu hệ thống nhân vật</h1>
+    </div>
+    <div id="login-right">
+        <a href="@Url.Action("DangNhap", "Character")">@ViewBag.name</a>
+    </div>
+</div>

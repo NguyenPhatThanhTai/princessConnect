@@ -12,14 +12,25 @@
 <body>
     <div class="header" id="header">
         <header>
-            <div class="topnav">
-                <a id="logo" class="active" href="#home" onclick="openNav()">&#9776; </a>
-                <img id="logo-image" src="~/Resource/Wiki-wordmark.png">
-                <!-- <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a> -->
-                <h1 style="color: rgb(187, 93, 196); text-align: center;">Giới thiệu hệ thống nhân vật</h1>
-            </div>
+            @Html.Action("Header", "Character")
+            <!--<div class="topnav">
+        <div id="logo-left">
+            <div id="logo" class="active" onclick="openNav()"><a href="#">&#9776; </a></div>
+        </div>
+        <div id="img-left">
+            <img id="logo-image" src="Wiki-wordmark.png">
+        </div>
+        <div id="img-left">
+            <h1 style="color: rgba(187, 93, 196, 0.692); text-align: center;">Giới thiệu hệ thống nhân vật</h1>
+        </div>
+        <div id="login-right">
+            <a href="#">Đăng nhập/Đăng ký</a>
+            <p>xin chào: Nguyễn Phát Thành Tài</p>
+        </div>-->
+            <!-- <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a> -->
+            <!--</div>-->
         </header>
 
         <div id="mySidenav" class="sidenav">

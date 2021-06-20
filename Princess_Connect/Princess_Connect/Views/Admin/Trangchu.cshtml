@@ -1,8 +1,12 @@
-﻿
+﻿@model List<Princess_Connect.Models.Characters>
 @{
     ViewBag.Title = "Trangchu";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Trangchu</h2>
+@foreach(var items in Model)
+            {
+                @items.Guild.GuildName
+            }
 

@@ -50,39 +50,58 @@ body {
     overflow: hidden;
     background-color: white;
     border-top: 5px solid pink;
+    height: 80px;
 }
 
-    .topnav #logo-image {
-        transition: 0.5s;
-        width: 300px;
+    .topnav #logo-left {
         float: left;
-    }
-
-    .topnav a {
-        transition: 0.5s;
-        float: left;
-        color: black;
         text-align: center;
-        padding: 20px 16px;
-        text-decoration: wavy;
-        font-size: 15px;
+        width: 50px;
+        height: 80px;
     }
 
-    .topnav #logo {
-        transition: 0.5s;
-        padding: 40px 16px;
-        background-color: pink;
+        .topnav #logo-left #logo {
+            transition: 0.5s;
+            background-color: pink;
+            font-size: 15px;
+            width: 100%;
+            padding-top: 25px;
+            padding-bottom: 35px;
+        }
+
+        .topnav #logo-left a {
+            text-decoration: none;
+        }
+
+    .topnav #login-right {
+        float: right;
+        text-align: right;
     }
 
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+        .topnav #login-right a {
+            text-decoration: none;
+            color: rgba(59, 56, 56, 0.753);
+            padding: 4px;
+            background-color: pink;
+        }
+
+        .topnav #login-right p {
+            margin-right: 10px;
+        }
+
+    .topnav #img-left {
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    .topnav a.active {
-        background-color: pink;
-        color: white;
-    }
+        .topnav #img-left img {
+            transition: 0.5s;
+            width: 300px;
+        }
+/* .topnav #img-left h2 {
+        font-size: ;
+    } */
 
 .ThanhChucNang {
     transition: 0.5s;
@@ -132,78 +151,84 @@ body {
         grid-area: middle;
         margin-top: 10px;
         text-align: center;
-        margin-left: 17px;
+        transition: 0.5s;
     }
 
-        #main #picture img {
-            transition: 0.5s;
-            width: 800px;
-        }
+#myVideo {
+    transition: 0.5s;
+    height: 445px;
+    border: 5px solid pink;
+}
 
-    #main .right-slide {
+#main #picture img {
+    transition: 0.5s;
+    width: 800px;
+}
+
+#main .right-slide {
+    transition: 0.5s;
+    text-align: center;
+    grid-area: right;
+    border: 5px solid pink;
+    margin-top: 10px;
+    margin-right: 17px;
+    align-items: center;
+}
+
+    #main .right-slide b {
+        display: block;
         transition: 0.5s;
         text-align: center;
-        grid-area: right;
-        border: 5px solid pink;
-        margin-top: 10px;
-        margin-right: 17px;
-        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgb(98, 184, 233);
+        color: rgb(108, 97, 109);
     }
 
-        #main .right-slide b {
-            display: block;
-            transition: 0.5s;
-            text-align: center;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            background-color: rgb(98, 184, 233);
-            color: rgb(108, 97, 109);
-        }
-
-        #main .right-slide #list {
-            transition: 0.5s;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            transition: 0.5s;
-        }
-
-            #main .right-slide #list a {
-                text-decoration: none;
-                transition: 0.5s;
-            }
-
-            #main .right-slide #list:hover #top {
-                filter: blur(3px);
-                opacity: .5;
-                transform: scale(.98);
-                box-shadow: none;
-            }
-
-            #main .right-slide #list a:hover #top:hover {
-                background-color: pink;
-                border: 2px solid rgb(241, 149, 164);
-                color: white;
-                box-shadow: 5px 10px 20px 20px rgb(241, 149, 164);
-                transition: 0.5s;
-                margin: 10px;
-                transform: scale(1);
-                filter: blur(0px);
-                opacity: 1;
-            }
-
-            #main .right-slide #list img {
-                transition: 0.5s;
-                width: 80px;
-                padding-top: 20px;
-                margin: 5px;
-            }
-
-    #main #header-main {
+    #main .right-slide #list {
         transition: 0.5s;
-        display: grid;
-        grid-template-areas: 'middle right';
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: 0.5s;
     }
+
+        #main .right-slide #list a {
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        #main .right-slide #list:hover #top {
+            filter: blur(3px);
+            opacity: .5;
+            transform: scale(.98);
+            box-shadow: none;
+        }
+
+        #main .right-slide #list a:hover #top:hover {
+            background-color: pink;
+            border: 2px solid rgb(241, 149, 164);
+            color: white;
+            box-shadow: 5px 10px 20px 20px rgb(241, 149, 164);
+            transition: 0.5s;
+            margin: 10px;
+            transform: scale(1);
+            filter: blur(0px);
+            opacity: 1;
+        }
+
+        #main .right-slide #list img {
+            transition: 0.5s;
+            width: 80px;
+            padding-top: 20px;
+            margin: 5px;
+        }
+
+#main #header-main {
+    transition: 0.5s;
+    display: grid;
+    grid-template-areas: 'middle right';
+}
 /* danh sách nhân vật */
 
 #main-content {
@@ -236,16 +261,16 @@ body {
     }
 
         #content #guild-container a {
-            transition: 0.5s;
+            transition: 0.3s;
             text-align: center;
             text-decoration: none;
         }
 
             #content #guild-container a:hover {
-                background-color: pink;
-                border: 2px solid rgb(241, 149, 164);
+                background-color: rgba(255, 192, 203, 0.555);
+                border: 2px solid rgba(241, 149, 164, 0.548);
                 color: white;
-                box-shadow: 5px 10px 20px 20px rgb(241, 149, 164);
+                box-shadow: 5px 10px 20px 20px rgba(199, 140, 150, 0.507);
                 margin: 20px;
             }
 
@@ -306,6 +331,11 @@ body {
     border: 5px solid rgb(78, 146, 209);
     box-shadow: 5px 10px 8px 10px rgba(63, 123, 163, 0.589);
 }
+
+    #facebook img {
+        text-align: center;
+        margin-top: 50px;
+    }
 /* footer */
 
 footer {
@@ -357,6 +387,10 @@ footer {
         margin-left: 0;
     }
 
+    #myVideo {
+        height: 200px;
+    }
+
     #main .right-slide {
         transition: 0.5s;
         text-align: center;
@@ -388,7 +422,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1300px) and (min-width: 600px) {
+@media only screen and (max-width: 1366px) and (min-width: 768px) {
     #main #header-main {
         display: grid;
         grid-template-areas: 'middle''right';

@@ -81,3 +81,9 @@ D:\Princess_Connect\Princess_Connect\obj\Debug\Princess_Connect.csproj.CoreCompi
 D:\Princess_Connect\Princess_Connect\obj\Debug\Princess_Connect.csproj.CopyComplete
 D:\Princess_Connect\Princess_Connect\obj\Debug\Princess_Connect.dll
 D:\Princess_Connect\Princess_Connect\obj\Debug\Princess_Connect.pdb
+D:\Princess_Connect\Princess_Connect\bin\System.Net.Http.Formatting.dll
+D:\Princess_Connect\Princess_Connect\bin\System.Web.Http.dll
+D:\Princess_Connect\Princess_Connect\bin\System.Web.Http.WebHost.dll
+D:\Princess_Connect\Princess_Connect\bin\System.Net.Http.Formatting.xml
+D:\Princess_Connect\Princess_Connect\bin\System.Web.Http.xml
+D:\Princess_Connect\Princess_Connect\bin\System.Web.Http.WebHost.xml
