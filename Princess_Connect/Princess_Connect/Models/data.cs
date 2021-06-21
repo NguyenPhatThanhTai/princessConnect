@@ -7,10 +7,10 @@ namespace Princess_Connect.Models
 {
     public class data
     {
-        public List<Characters> getAll()
+        public List<Saved> getAll()
         {
-            Model model = new Model();
-            return model.Characters.ToList();
+            DAO model = new DAO();
+            return model.Saved.ToList();
         }
     }
 }

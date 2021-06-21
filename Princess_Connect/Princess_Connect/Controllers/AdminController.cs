@@ -10,9 +10,9 @@ namespace Princess_Connect.Controllers
 {
     public class AdminController : Controller
     {
-        private Model _DAO;
+        private DAO _DAO;
 
-        public AdminController(Model dao)
+        public AdminController(DAO dao)
         {
             _DAO = dao;
         }

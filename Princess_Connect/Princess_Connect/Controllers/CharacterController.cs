@@ -10,11 +10,11 @@ namespace Princess_Connect.Controllers
 {
     public class CharacterController : Controller
     {
-        private Model dao = null;
+        private DAO dao = null;
 
         public CharacterController()
         {
-            dao = new Model();
+            dao = new DAO();
         }
         // GET: Header
         [HttpGet]
@@ -35,7 +35,7 @@ namespace Princess_Connect.Controllers
         [HttpGet]
         public ActionResult TrangChu()
         {
-            List<Characters> list = new data().getAll();
+            List<Saved> list = new data().getAll();
             //ViewBag.list = list;
             return View(list);
         }

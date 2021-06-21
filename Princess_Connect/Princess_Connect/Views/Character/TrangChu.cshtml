@@ -1,11 +1,13 @@
-﻿@model List<Princess_Connect.Models.Characters>
+﻿@model List<Princess_Connect.Models.Saved>
 @{
     ViewBag.Title = "Trang Chủ";
 }
 
-@foreach(var items in Model)
-            {
-                <h2>@items.Guild.GuildName</h2>
-            }
+@foreach (var items in Model)
+{
+    <h2>
+        @items.User.FullName
+</h2>
+}
 
 
